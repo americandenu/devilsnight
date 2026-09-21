@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DEVIL’S NIGHT BROOKLAND | THE UNTOLD 1949 EXORCIST BIKE TOUR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@600;700&family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg: #07040a;
+      --card-bg: #10091d;
+      --card-border: #3b1859;
+      --purple-accent: #a855f7;
+      --purple-glow: rgba(168, 85, 247, 0.4);
+      --amber: #f59e0b;
+      --text: #f3e8ff;
+      --text-dim: #a797b5;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      line-height: 1.65;
+      padding-bottom: 90px;
+      background-image: 
+        radial-gradient(circle at 50% 5%, #240c42 0%, transparent 55%),
+        radial-gradient(circle at 90% 85%, #160728 0%, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .container {
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Top Utility Banner */
+    .banner {
+      border-bottom: 1px solid var(--card-border);
+      padding: 14px 0;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.16em;
+      color: var(--purple-accent);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-transform: uppercase;
+    }
+    .badge {
+      background: rgba(168, 85, 247, 0.15);
+      border: 1px solid var(--purple-accent);
+      color: #fff;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 60px 0 50px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 48px;
+      align-items: center;
+      border-bottom: 1px solid var(--card-border);
+    }
+    .hero-eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      letter-spacing: 0.22em;
+      color: var(--purple-accent);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: clamp(2.3rem, 4.5vw, 3.6rem);
+      line-height: 1.08;
+      color: #fff;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      text-shadow: 0 0 35px var(--purple-glow);
+    }
+    .hero-sub {
+      font-family: 'Cinzel', serif;
+      font-size: 1.15rem;
+      color: #d8b4fe;
+      margin-bottom: 22px;
+      letter-spacing: 0.08em;
+    }
+    .hero-body {
+      color: var(--text-dim);
+      font-size: 1rem;
+      margin-bottom: 28px;
+    }
+
+    /* Logistics Grid */
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .meta-cell {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 6px;
+      padding: 12px 16px;
+    }
+    .meta-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      color: var(--purple-accent);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+    .meta-desc {
+      font-weight: 600;
+      color: #fff;
+      font-size: 0.92rem;
+      margin-top: 3px;
+    }
+
+    /* Notice Box */
+    .notice-box {
+      background: rgba(168, 85, 247, 0.06);
+      border-left: 3px solid var(--purple-accent);
+      padding: 14px 18px;
+      font-size: 0.85rem;
+      color: #e9d5ff;
+      margin-bottom: 30px;
+      line-height: 1.55;
+    }
+
+    /* Primary Action Buttons */
+    .btn-group {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .btn-main {
+      background: linear-gradient(135deg, #7e22ce, #581c87);
+      border: 1px solid #c084fc;
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 4px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      box-shadow: 0 0 25px var(--purple-glow);
+      cursor: pointer;
+      display: inline-block;
+      transition: all 0.2s ease;
+    }
+    .btn-main:hover {
+      background: linear-gradient(135deg, #9333ea, #6b21a8);
+      transform: translateY(-2px);
+    }
+    .btn-ghost {
+      background: transparent;
+      border: 1px solid var(--card-border);
+      color: #d8b4fe;
+      padding: 14px 22px;
+      border-radius: 4px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    /* Key Visual Card */
+    .art-card {
+      background: #000;
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.9), 0 0 35px rgba(168, 85, 247, 0.25);
+      text-align: center;
+    }
+    .art-frame {
+      border: 1px solid #2a1142;
+      border-radius: 8px;
+      aspect-ratio: 4 / 5;
+      background: radial-gradient(circle at 50% 25%, #2a1245 0%, #07040a 85%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .art-caption {
+      margin-top: 14px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--text-dim);
+      letter-spacing: 0.15em;
+    }
+
+    /* Content Sections */
+    .section-head {
+      font-family: 'Cinzel', serif;
+      font-size: 1.7rem;
+      color: #fff;
+      text-align: center;
+      margin: 60px 0 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .section-sub {
+      text-align: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      color: var(--purple-accent);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 32px;
+    }
+
+    /* Provenance Box */
+    .provenance-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 36px 32px;
+      margin-bottom: 40px;
+      position: relative;
+    }
+    .provenance-card p {
+      color: #d1c5df;
+      font-size: 0.96rem;
+      margin-bottom: 18px;
+      line-height: 1.7;
+    }
+    .provenance-card p:last-child {
+      margin-bottom: 0;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    /* Route Cards */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 24px;
+      transition: all 0.2s ease;
+    }
+    .card:hover {
+      border-color: var(--purple-accent);
+      transform: translateY(-3px);
+    }
+    .step-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--amber);
+      letter-spacing: 0.12em;
+      margin-bottom: 10px;
+    }
+    .card h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.1rem;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .card p {
+      font-size: 0.88rem;
+      color: var(--text-dim);
+      line-height: 1.6;
+    }
+
+    /* Feature Cards */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+    .feature-card {
+      background: linear-gradient(180deg, #130826 0%, #0c0517 100%);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 28px;
+    }
+    .feature-card h3 {
+      font-family: 'Cinzel', serif;
+      color: #fff;
+      font-size: 1.15rem;
+      margin-bottom: 10px;
+    }
+    .feature-card p {
+      color: var(--text-dim);
+      font-size: 0.88rem;
+      line-height: 1.6;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--card-border);
+      padding: 40px 0 0;
+      text-align: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.74rem;
+      color: var(--text-dim);
+      letter-spacing: 0.12em;
+    }
+
+    @media (max-width: 860px) {
+      .hero { grid-template-columns: 1fr; }
+      .grid-3 { grid-template-columns: 1fr; }
+      .feature-grid { grid-template-columns: 1fr; }
+      .banner { flex-direction: column; gap: 8px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- Top Status Banner -->
+    <div class="banner">
+      <span>OCTOBER 30 2026 • OFFICIAL EXORCIST DAY • WASHINGTON DC</span>
+      <span class="badge">TOUR 1 TICKETS ON SALE (LIMITED CAPACITY)</span>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div>
+        <div class="hero-eyebrow">A NIGHT RIDE INTO CINEMATIC AND DEMONIC HISTORY</div>
+        <h1>Devil’s Night<br>Brookland</h1>
+        <div class="hero-sub">The Untold 1949 Exorcist Bike Tour</div>
+        
+        <p class="hero-body">
+          Before Hollywood put the story on the Georgetown Exorcist Steps, the real accounts unfolded across town. On Friday October 30 for the official anniversary of The Exorcist Day in Washington, we mount up for a guided twilight roll up the trail. We ride to the boy’s actual church where things first turned strange under Reverend Schulze.
+        </p>
+
+        <div class="meta-grid">
+          <div class="meta-cell">
+            <div class="meta-title">Rendezvous</div>
+            <div class="meta-desc">Alegria (RIA Metro)</div>
+          </div>
+          <div class="meta-cell">
+            <div class="meta-title">Start Time</div>
+            <div class="meta-desc">630 PM Sharp</div>
+          </div>
+          <div class="meta-cell">
+            <div class="meta-title">Destination</div>
+            <div class="meta-desc">1949 Church Site (Brookland)</div>
+          </div>
+          <div class="meta-cell">
+            <div class="meta-title">The Pace</div>
+            <div class="meta-desc">10 Min Bike Ride Pace</div>
+          </div>
+        </div>
+
+        <div class="notice-box">
+          Alegria sits right outside the Rhode Island Ave Brentwood Red Line Metro stop. Capital Bikeshare docks and Lime e-bikes are scattered nearby, but getting a bike is entirely on you. We will be at Alegria for one drink and the prologue before we roll out sharp with or without you.
+        </div>
+
+        <div class="btn-group">
+          <button class="btn-main" onclick="alert('Proceeding to $20 ticket checkout...')">CLAIM YOUR TOUR SLOT ($20)</button>
+          <a href="#future" class="btn-ghost">ADDITIONAL DATES AND INFO</a>
+        </div>
+      </div>
+
+      <!-- Master Visual Card Frame -->
+      <div class="art-card">
+        <div class="art-frame">
+          <!-- Stylized key art representation matching the approved visual -->
+          <svg viewBox="0 0 400 500" width="100%" height="100%">
+            <defs>
+              <linearGradient id="beam" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+                <stop offset="35%" stop-color="#e9d5ff" stop-opacity="0.4"/>
+                <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <!-- Facade Outline with 3 lancet windows and cross -->
+            <polygon points="200,60 110,140 110,340 290,340 290,140" fill="#180b2a" stroke="#5b21b6" stroke-width="2"/>
+            <line x1="200" y1="30" x2="200" y2="60" stroke="#ffffff" stroke-width="4"/>
+            <line x1="190" y1="42" x2="210" y2="42" stroke="#ffffff" stroke-width="4"/>
+            <!-- 3 Lancet Windows -->
+            <path d="M 155 180 Q 155 150 165 150 Q 175 150 175 180 L 175 250 L 155 250 Z" fill="#0d0417" stroke="#3b1859" stroke-width="2"/>
+            <path d="M 190 170 Q 190 140 200 140 Q 210 140 210 170 L 210 250 L 190 250 Z" fill="#0d0417" stroke="#3b1859" stroke-width="2"/>
+            <path d="M 225 180 Q 225 150 235 150 Q 245 150 245 180 L 245 250 L 225 250 Z" fill="#0d0417" stroke="#3b1859" stroke-width="2"/>
+            <!-- Streetlight and cone -->
+            <line x1="200" y1="210" x2="200" y2="340" stroke="#10061e" stroke-width="3"/>
+            <circle cx="200" cy="210" r="7" fill="#ffffff"/>
+            <polygon points="200,210 100,420 300,420" fill="url(#beam)"/>
+            <!-- Lantern -->
+            <circle cx="230" cy="385" r="18" fill="#f59e0b" opacity="0.4"/>
+            <rect x="227" y="380" width="6" height="11" rx="1" fill="#f59e0b"/>
+            <!-- 3 Stationary Bicycles & Figures -->
+            <circle cx="200" cy="340" r="10" fill="#07040a"/>
+            <path d="M 190 350 L 210 350 L 214 395 L 198 420 L 186 395 Z" fill="#07040a"/>
+            <circle cx="160" cy="425" r="18" stroke="#07040a" stroke-width="4" fill="none"/>
+            <circle cx="240" cy="425" r="18" stroke="#07040a" stroke-width="4" fill="none"/>
+            <!-- Side Riders -->
+            <circle cx="100" cy="360" r="8" fill="#07040a"/>
+            <circle cx="75" cy="430" r="15" stroke="#07040a" stroke-width="3" fill="none"/>
+            <circle cx="130" cy="430" r="15" stroke="#07040a" stroke-width="3" fill="none"/>
+            <circle cx="300" cy="360" r="8" fill="#07040a"/>
+            <circle cx="270" cy="430" r="15" stroke="#07040a" stroke-width="3" fill="none"/>
+            <circle cx="330" cy="430" r="15" stroke="#07040a" stroke-width="3" fill="none"/>
+          </svg>
+        </div>
+        <div class="art-caption">OCTOBER 30 • OFFICIAL EXORCIST DAY D.C.</div>
+      </div>
+    </section>
+
+    <!-- Curator Provenance -->
+    <div class="section-head">The Curator’s Provenance</div>
+    <div class="section-sub">Authorized Lineage and Eyewitness History</div>
+    
+    <div class="provenance-card">
+      <p>
+        This is not an urban legend ride. It is an archival field investigation led by the co-organizer of DC’s official Exorcist Day.
+      </p>
+      <p>
+        In 2015 we brought Academy Award winning director William Friedkin and Academy Award winning author William Peter Blatty to Washington to dedicate the 36th and Prospect Exorcist Steps. Friedkin later told Jake Tapper on CNN that what we did for him on the Exorcist Steps meant more to him than winning his Oscar.
+      </p>
+      <p>
+        While Blatty wrote the novel, this ride belongs to Friedkin’s vision and obsessive search for the truth. The curator worked directly on Friedkin’s Vatican documentary The Devil and Father Amorth, shot by Robert Yeoman, the celebrated cinematographer behind every Wes Anderson feature film. Long before co-hosting the film’s premiere at Landmark’s E Street Cinema, the curator and Friedkin spent extensive time together across DC and Georgetown. Through those walks and hours of conversation, they forged a bond centered on Friedkin’s artistic philosophy, his unfiltered storytelling, and his fascination with the supernatural. When Friedkin passed away, the curator organized and hosted the public memorial gathering at the Exorcist Steps to honor his life and towering legacy in the city.
+      </p>
+      <p>
+        While the film made Georgetown world famous, critical chapters of the real 1949 case unfolded five miles east in Brookland. Tonight on the anniversary of the proclamation, we ride to the boy’s real church where it all happened.
+      </p>
+    </div>
+
+    <!-- Expedition Route -->
+    <div class="section-head">The Expedition</div>
+    <div class="section-sub">A 10 minute bike ride pace to the church</div>
+
+    <div class="grid-3">
+      <div class="card">
+        <div class="step-badge">LEG 01 // 630 PM</div>
+        <h3>The Gathering at Alegria</h3>
+        <p>
+          Meet at Alegria directly outside the Rhode Island Ave Red Line Metro. Check in, grab one drink, inspect the archival case notes, and hear the prologue detailing the 1949 case and Friedkin’s personal history in the District. We stay for one drink before rolling out.
+        </p>
+      </div>
+      <div class="card">
+        <div class="step-badge">LEG 02 // 700 PM</div>
+        <h3>The MBT in the Dark</h3>
+        <p>
+          A calm twilight roll north on the Metropolitan Branch Trail alongside the rail lines before we branch off into the quiet neighborhood streets of Brookland.
+        </p>
+      </div>
+      <div class="card">
+        <div class="step-badge">LEG 03 // 730 PM</div>
+        <h3>The Church</h3>
+        <p>
+          We halt under the streetlamp outside the quiet church. Standing before the three gothic lancet windows, we break down the original dossier from 1949 when the family sought out Reverend Schulze after the disturbances escalated.
+        </p>
+      </div>
+    </div>
+
+    <!-- Features: Merch & Finish -->
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="step-badge">RIDER BENEFIT</div>
+        <h3>The Official Commemorative Artifact</h3>
+        <p>
+          Every registered rider will receive an exclusive limited-edition commemorative artifact made specifically for this tour and designed to archival case standards. Included with your $20 registration and handed out at check-in.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="step-badge">THE FINISH</div>
+        <h3>The Dew Drop Inn</h3>
+        <p>
+          Following our time outside the church, we head around the corner to The Dew Drop Inn for pints, case files, and a little ritual bloodletting over cold craft beer. The tour officially wraps up at Dew Drop, which drops you right back onto the Metropolitan Branch Trail for an easy cruise home or a quick walk to both the Brookland CUA and Rhode Island Ave Red Line Metro stops.
+        </p>
+      </div>
+    </div>
+
+    <!-- Capacity Note -->
+    <div id="future" class="feature-card" style="margin-bottom: 50px;">
+      <div class="step-badge" style="color:var(--purple-accent);">PACK LOGISTICS</div>
+      <h3>Capacity and Future Dates</h3>
+      <p>
+        To keep the pack safe, tight, and respectful of the neighborhood streets, capacity for the October 30 tour is strictly limited. If the ride sells out, a waitlist and a potential second tour date will be announced here on the site.
+      </p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2026 DEVIL’S NIGHT BROOKLAND • AN ARCHIVAL BICYCLE INVESTIGATION</p>
+      <p style="margin-top: 8px; font-size: 0.68rem; color: #7e718b;">
+        Please respect private property and local neighborhood peace. Front white headlights and rear red taillights are mandatory.
+      </p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
